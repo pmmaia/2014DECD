@@ -1,0 +1,9 @@
+= link_to 'Add Record', new_air_monitor_database_path, data: {role: 'button'}
+%h1 Listing air monitor records
+- @air_monitor_databases.each do |air_monitor_database|
+  %div{ data: {role: 'collapsible'}}
+    %h3 PM10: #{air_monitor_database.pm10data}
+    %h4 NOA: #{air_monitor_database.noadata}
+    %h4 Field Engineer: #{air_monitor_database.fieldengineer}
+    = link_to 'Edit', edit_air_monitor_database_path(air_monitor_database), data: {role: 'button'}
+    = link_to 'Destroy', air_monitor_database, confirm: 'Are you sure?', method: :delete, data: {role: 'button'}

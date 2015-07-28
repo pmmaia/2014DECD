@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pm10data: MyString
+  noadata: MyString
+  fieldengineer: MyString
+
+two:
+  pm10data: MyString
+  noadata: MyString
+  fieldengineer: MyString

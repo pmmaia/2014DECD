@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %strong PM10 Data:
+  = @air_monitor_database.pm10data
+%p
+  %strong NOA Data:
+  = @air_monitor_database.noadata
+%p
+  %strong Field Engineer:
+  = @air_monitor_database.fieldengineer
+= link_to 'Edit', edit_air_monitor_database_path(@air_monitor_database), data: { role: 'button' }

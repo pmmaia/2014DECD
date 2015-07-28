@@ -1,0 +1,32 @@
+<%= form_for(@air_monitor_database) do |f| %>
+  <% if @air_monitor_database.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@air_monitor_database.errors.count, "error") %> prohibited this air_monitor_database from being saved:</h2>
+
+      <ul>
+      <% @air_monitor_database.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pm10data, "PM10" %>
+    <%= f.text_field :pm10data %>
+  </div>
+  </br>
+  <div class="field">
+    <%= f.label :noadata, "NOA", :class => 'strong' %>
+    <%= f.text_field :noadata %>
+  </div>
+  </br>
+  <div class="field">
+    <%= f.label :fieldengineer, "Field Engineer", :class => 'strong' %>
+    <%= f.text_field :fieldengineer %>
+  </div>
+  </br>
+  <div class="actions">
+    <%= f.submit "Create Record" %>
+  </div>
+<% end %>
